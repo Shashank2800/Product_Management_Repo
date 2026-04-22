@@ -33,8 +33,8 @@ pipeline {
         stage('Run in Docker') {
             steps {
                 // Stops any old container and starts a new one on port 9090
-                bat 'docker stop my-app || true'
-                bat 'docker rm my-app || true'
+                // bat 'docker stop my-app || true'
+                // bat 'docker rm my-app || true'
                 bat 'docker run -d --name my-app -p 9090:8080 my-spring-app:latest'
             }
         }
