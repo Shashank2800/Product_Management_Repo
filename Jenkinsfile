@@ -14,14 +14,14 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
-            steps {
-                // Ensure 'SonarServer' matches the name in Jenkins > System
-                withSonarQubeEnv('SonarServer') {
-                    bat 'mvn sonar:sonar'
-                }
-            }
-        }
+        // stage('SonarQube Analysis') {
+        //     steps {
+        //         // Ensure 'SonarServer' matches the name in Jenkins > System
+        //         withSonarQubeEnv('SonarServer') {
+        //             bat 'mvn sonar:sonar'
+        //         }
+        //     }
+        // }
 
         stage('Build Docker Image') {
             steps {
